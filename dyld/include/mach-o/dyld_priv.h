@@ -126,6 +126,8 @@ typedef struct {
     uint32_t        version;
 } dyld_build_version_t;
 
+#define __API_AVAILABLE_PLATFORM_bridgeos(x) bridgeos,introduced=x
+
 // Returns the active platform of the process
 extern dyld_platform_t dyld_get_active_platform(void) __API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0), bridgeos(3.0));
 
