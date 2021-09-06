@@ -118,7 +118,7 @@ extern void _tlv_bootstrap(void)                                             __O
  * cannot stat() the file to see if it "exists".  This function is like a stat() call that checks if a
  * path is to a dylib that was removed from disk and is incorporated into the active dyld cache.
  */
-extern bool _dyld_shared_cache_contains_path(const char* path)               __API_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0), bridgeos(5.0)) DYLD_DRIVERKIT_UNAVAILABLE;
+extern bool _dyld_shared_cache_contains_path(const char* path)               __API_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0)) DYLD_DRIVERKIT_UNAVAILABLE;
 
 
 /*
