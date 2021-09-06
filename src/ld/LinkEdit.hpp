@@ -30,8 +30,8 @@
 #include <errno.h>
 #include <limits.h>
 #include <unistd.h>
-#include <CommonCrypto/CommonDigest.h>
-#include <CommonCrypto/CommonDigestSPI.h>
+#include "CommonDigest.h"
+#include "Private/CommonDigestSPI.h"
 
 #include <vector>
 #include <unordered_map>
