@@ -750,8 +750,6 @@
 				DefaultBuildSystemTypeForWorkspace = Latest;
 				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Apple Inc.";
-				TargetAttributes = {
-				};
 			};
 			buildConfigurationList = F933D92309291AC90083EAC8 /* Build configuration list for PBXProject "ld64" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -813,7 +811,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/csh;
-			shellScript = "echo \"static const char *compile_stubs = \" > $DERIVED_FILE_DIR/compile_stubs.h\ncat compile_stubs | sed s/\\\"/\\\\\\\\\\\"/g | sed s/^/\\\"/ | sed s/\\$/\\\\\\\\n\\\"/ >> $DERIVED_FILE_DIR/compile_stubs.h\necho \";\" >> $DERIVED_FILE_DIR/compile_stubs.h";
+			shellScript = "echo \"static const char *compile_stubs = \" > $DERIVED_FILE_DIR/compile_stubs.h\ncat compile_stubs | sed s/\\\"/\\\\\\\\\\\"/g | sed s/^/\\\"/ | sed s/\\$/\\\\\\\\n\\\"/ >> $DERIVED_FILE_DIR/compile_stubs.h\necho \";\" >> $DERIVED_FILE_DIR/compile_stubs.h\n";
 			showEnvVarsInLog = 0;
 		};
 		F94E0A911CAC6B870092DC75 /* Add libtapi symlink */ = {
@@ -1236,6 +1234,11 @@
 				HEADER_SEARCH_PATHS = (
 					"$(DT_TOOLCHAIN_DIR)/usr/local/include",
 					"$(TOOLCHAIN_DIR)/usr/local/include",
+					"$(SRCROOT)/tapi/include",
+					"$(SRCROOT)/dyld/include",
+					"$(SRCROOT)/llvm",
+					"$(SRCROOT)/xnu/EXTERNAL_HEADERS",
+					"$(SRCROOT)/CommonCrypto/include",
 				);
 				INSTALL_PATH = "$(DT_VARIANT)/$(TOOLCHAIN_INSTALL_DIR)/usr/bin";
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../lib/";
@@ -1315,6 +1318,11 @@
 				HEADER_SEARCH_PATHS = (
 					"$(DT_TOOLCHAIN_DIR)/usr/local/include",
 					"$(TOOLCHAIN_DIR)/usr/local/include",
+					"$(SRCROOT)/tapi/include",
+					"$(SRCROOT)/dyld/include",
+					"$(SRCROOT)/llvm",
+					"$(SRCROOT)/xnu/EXTERNAL_HEADERS",
+					"$(SRCROOT)/CommonCrypto/include",
 				);
 				INSTALL_PATH = "$(DT_VARIANT)/$(TOOLCHAIN_INSTALL_DIR)/usr/bin";
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../lib/";
@@ -1629,6 +1637,11 @@
 				HEADER_SEARCH_PATHS = (
 					"$(DT_TOOLCHAIN_DIR)/usr/local/include",
 					"$(TOOLCHAIN_DIR)/usr/local/include",
+					"$(SRCROOT)/tapi/include",
+					"$(SRCROOT)/dyld/include",
+					"$(SRCROOT)/llvm",
+					"$(SRCROOT)/xnu/EXTERNAL_HEADERS",
+					"$(SRCROOT)/CommonCrypto/include",
 				);
 				INSTALL_PATH = "$(DT_VARIANT)/$(TOOLCHAIN_INSTALL_DIR)/usr/bin";
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../lib/";
