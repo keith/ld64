@@ -1338,6 +1338,7 @@
 					"-ltapi",
 					"@$(DERIVED_FILE_DIR)/linkExtras",
 					"-Wl,-stack_size,0x01000000",
+					"-Wl,-rpath,$(DT_TOOLCHAIN_DIR)/usr/lib",
 				);
 				PRODUCT_NAME = ld;
 				SDKROOT = macosx;
