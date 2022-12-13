@@ -36,6 +36,7 @@
 #include <Availability.h>
 #include <tapi/tapi.h>
 
+#include <algorithm>
 #include <vector>
 #include <map>
 #include <sstream>

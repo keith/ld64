@@ -34,6 +34,7 @@
 #include <pthread.h>
 #include <mach-o/dyld.h>
 #include <dlfcn.h>
+#include <algorithm>
 #include <atomic>
 #include <vector>
 #include <map>

@@ -29,6 +29,7 @@
 #include <dlfcn.h>
 #include <libkern/OSByteOrder.h>
 
+#include <algorithm>
 #include <vector>
 #include <map>
 
