@@ -1248,10 +1248,12 @@
 					"-stdlib=libc++",
 					"-lxar",
 					"-Wl,-exported_symbol,__mh_execute_header",
+					"-Wl,-rpath,$(SRCROOT)",
+					"-L$(SRCROOT)",
 					"-L$(DT_TOOLCHAIN_DIR)/usr/lib",
 					"-ltapi",
 					"@$(DERIVED_FILE_DIR)/linkExtras",
-					"-Wl,-stack_size,0x10000000",
+					"-Wl,-rpath,$(DT_TOOLCHAIN_DIR)/usr/lib",
 				);
 				PRODUCT_NAME = ld;
 				SDKROOT = macosx;
@@ -1326,6 +1328,8 @@
 					"-stdlib=libc++",
 					"-lxar",
 					"-Wl,-exported_symbol,__mh_execute_header",
+					"-Wl,-rpath,$(SRCROOT)",
+					"-L$(SRCROOT)",
 					"-L$(DT_TOOLCHAIN_DIR)/usr/lib",
 					"-ltapi",
 					"@$(DERIVED_FILE_DIR)/linkExtras",
@@ -1641,10 +1645,12 @@
 					"-stdlib=libc++",
 					"-lxar",
 					"-Wl,-exported_symbol,__mh_execute_header",
+					"-Wl,-rpath,$(SRCROOT)",
+					"-L$(SRCROOT)",
 					"-L$(DT_TOOLCHAIN_DIR)/usr/lib",
 					"-ltapi",
 					"@$(DERIVED_FILE_DIR)/linkExtras",
-					"-Wl,-stack_size,0x01000000",
+					"-Wl,-rpath,$(DT_TOOLCHAIN_DIR)/usr/lib",
 				);
 				PRODUCT_NAME = ld;
 				SDKROOT = macosx;
