@@ -57,7 +57,7 @@
 
 #include <CommonCrypto/CommonDigest.h>
 #include <AvailabilityMacros.h>
-#include <System/machine/cpu_capabilities.h>
+//#include <System/machine/cpu_capabilities.h>
 
 #include "MachOTrie.hpp"
 
