@@ -57,7 +57,11 @@
 
 #include <CommonCrypto/CommonDigest.h>
 #include <AvailabilityMacros.h>
-//#include <System/machine/cpu_capabilities.h>
+#if __arm64__
+#include "arm_cpu_capabilities.h"
+#elif __x86_64__
+#include "x86_cpu_capabilities.h"
+#endif
 
 #include "MachOTrie.hpp"
 
@@ -4854,7 +4858,8 @@ uint32_t OutputFile::dylibToOrdinal(const ld::dylib::File* dylib) const
 
 void OutputFile::buildDylibOrdinalMapping(ld::Internal& state)
 {
-	std::map<const char *,  generic::dylib::File*> syntheticDylibs;
+	std::map<const char *,  generic::dylib::File*> syntheticDylibs2;
+	std::vector<std::pair<const char *,  generic::dylib::File*>> syntheticDylibs;
 	std::set<const generic::dylib::File*> potentiallyDeadDylibs;
 
 	// Scan through all import atoms looking for redirects
@@ -4865,18 +4870,23 @@ void OutputFile::buildDylibOrdinalMapping(ld::Internal& state)
 			if (!atom || !atom->installname()) { continue; }
 
 			generic::dylib::File* newFile = nullptr;
-			auto i = syntheticDylibs.find(atom->installname());
-			if (i == syntheticDylibs.end()) {
+			auto i = syntheticDylibs2.find(atom->installname());
+			if (i == syntheticDylibs2.end()) {
 				auto file = dynamic_cast<const generic::dylib::File*>(atom->file());
 				newFile = file->createSyntheticDylib(atom->installname(), atom->compat_version());
-				syntheticDylibs[atom->installname()] = newFile;
+				syntheticDylibs2[atom->installname()] = newFile;
 				potentiallyDeadDylibs.insert(file);
+				syntheticDylibs.emplace_back(atom->installname(), newFile);
 			} else {
 				newFile = i->second;
 			}
 			newFile->addExportedSymbol(atom);
 		}
 	}
+
+	std::sort(syntheticDylibs.begin(), syntheticDylibs.end(), [](std::pair<const char *, generic::dylib::File*> &left, std::pair<const char *, generic::dylib::File*> &right) {
+		return strcmp(left.first, right.first);
+	});
 
 	// CHeck back through the symbol sources to see if anything still points at them, and remove them from potentially dead dylibs
 	for (const ld::Internal::FinalSection* sect : state.sections) {
@@ -4894,11 +4904,13 @@ void OutputFile::buildDylibOrdinalMapping(ld::Internal& state)
 		// Any dylibs still in potentiallyDeadDylibs are dead, filter those out
 		auto file = dynamic_cast<const generic::dylib::File*>(dylib);
 		if (potentiallyDeadDylibs.count(file) != 0) { continue; }
+		printf("adding %s\n", dylib->installPath());
 		dylibs.push_back(dylib);
 	}
 
 	// Add any synthetic dylibs to the end of the load list
 	for (auto& dylib : syntheticDylibs) {
+		printf("adding3 %s\n", dylib.first);
 		dylibs.push_back(dylib.second);
 	}
 
@@ -4922,13 +4934,16 @@ void OutputFile::buildDylibOrdinalMapping(ld::Internal& state)
 		else if ( this->hasOrdinalForInstallPath(aDylib->installPath(), &ordinal) ) {
 			// already have a dylib with that install path, map all uses to that ordinal
 			_dylibToOrdinal[aDylib] = ordinal;
+			abort();
 		}
 		else if ( aDylib->willBeReExported() && ! aDylib->hasPublicInstallName() && (nonPublicReExportCount >= 2) ) {
 			_dylibsToLoad.push_back(aDylib);
 			_dylibToOrdinal[aDylib] = BIND_SPECIAL_DYLIB_SELF;
+			abort();
 		}
 		else {
 			// first time this install path seen, create new ordinal
+			printf("adding2 %s\n", aDylib->installPath());
 			_dylibsToLoad.push_back(aDylib);
 			_dylibToOrdinal[aDylib] = _dylibsToLoad.size();
 		}
