@@ -160,7 +160,7 @@ typedef enum {
 
 typedef struct __NSObjectFileImage* NSObjectFileImage;
 
-
+#define DYLD_EXCLAVEKIT_UNAVAILABLE
 
 /* NSObjectFileImage can only be used with MH_BUNDLE files */
 extern NSObjectFileImageReturnCode NSCreateObjectFileImageFromFile(const char* pathName, NSObjectFileImage *objectFileImage)               __API_UNAVAILABLE(ios, tvos, watchos) __API_UNAVAILABLE(bridgeos) DYLD_DRIVERKIT_UNAVAILABLE DYLD_EXCLAVEKIT_UNAVAILABLE __OSX_DEPRECATED(10.1, 10.5, "dlopen()");
