@@ -1083,12 +1083,11 @@
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/src/ld",
 					"$(DEVELOPER_DIR)/usr/local/include",
-					"$(DT_TOOLCHAIN_DIR)/usr/local/include",
 				);
 				INSTALL_PATH = "$(DT_VARIANT)/$(TOOLCHAIN_INSTALL_DIR)/usr/local/bin";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = objcimageinfo;
-				SDKROOT = macosx.internal;
+				SDKROOT = macosx;
 				WARNING_CFLAGS = (
 					"-Wmost",
 					"-Wno-four-char-constants",
@@ -1112,11 +1111,10 @@
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/src/ld",
 					"$(DEVELOPER_DIR)/usr/local/include",
-					"$(DT_TOOLCHAIN_DIR)/usr/local/include",
 				);
 				INSTALL_PATH = "$(DT_VARIANT)/$(TOOLCHAIN_INSTALL_DIR)/usr/local/bin";
 				PRODUCT_NAME = objcimageinfo;
-				SDKROOT = macosx.internal;
+				SDKROOT = macosx;
 				WARNING_CFLAGS = (
 					"-Wmost",
 					"-Wno-four-char-constants",
@@ -1140,11 +1138,10 @@
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/src/ld",
 					"$(DEVELOPER_DIR)/usr/local/include",
-					"$(DT_TOOLCHAIN_DIR)/usr/local/include",
 				);
 				INSTALL_PATH = "$(DT_VARIANT)/$(TOOLCHAIN_INSTALL_DIR)/usr/local/bin";
 				PRODUCT_NAME = objcimageinfo;
-				SDKROOT = macosx.internal;
+				SDKROOT = macosx;
 				WARNING_CFLAGS = (
 					"-Wmost",
 					"-Wno-four-char-constants",
@@ -1198,10 +1195,7 @@
 				GCC_WARN_UNUSED_PARAMETER = NO;
 				GCC_WARN_UNUSED_VALUE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = (
-					"$(DT_TOOLCHAIN_DIR)/usr/local/include",
-					"$(TOOLCHAIN_DIR)/usr/local/include",
-				);
+				HEADER_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/local/include";
 				INSTALL_PATH = "$(DT_VARIANT)/$(TOOLCHAIN_INSTALL_DIR)/usr/bin";
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../lib/";
 				LINKER_DISPLAYS_MANGLED_NAMES = NO;
@@ -1221,7 +1215,7 @@
 					"-Wl,-client_name,ld",
 				);
 				PRODUCT_NAME = "ld-classic";
-				SDKROOT = macosx.internal;
+				SDKROOT = macosx;
 				SECTORDER_FLAGS = "";
 				VERSIONING_SYSTEM = "apple-generic";
 				WARNING_CFLAGS = (
@@ -1280,10 +1274,7 @@
 				GCC_WARN_UNUSED_PARAMETER = NO;
 				GCC_WARN_UNUSED_VALUE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = (
-					"$(DT_TOOLCHAIN_DIR)/usr/local/include",
-					"$(TOOLCHAIN_DIR)/usr/local/include",
-				);
+				HEADER_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/local/include";
 				INSTALL_PATH = "$(DT_VARIANT)/$(TOOLCHAIN_INSTALL_DIR)/usr/bin";
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../lib/";
 				OTHER_CPLUSPLUSFLAGS = (
@@ -1301,7 +1292,7 @@
 					"-Wl,-client_name,ld",
 				);
 				PRODUCT_NAME = "ld-classic";
-				SDKROOT = macosx.internal;
+				SDKROOT = macosx;
 				SECTORDER_FLAGS = "";
 				STRIP_INSTALLED_PRODUCT = YES;
 				STRIP_STYLE = debugging;
@@ -1338,7 +1329,6 @@
 				GCC_WARN_UNUSED_VALUE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
-					"$(DT_TOOLCHAIN_DIR)/usr/local/include",
 					"$(TOOLCHAIN_DIR)/usr/local/include",
 					"$(SRCROOT)/src/ld",
 				);
@@ -1351,7 +1341,7 @@
 				OTHER_LDFLAGS = "-stdlib=libc++";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = ObjectDump;
-				SDKROOT = macosx.internal;
+				SDKROOT = macosx;
 				SECTORDER_FLAGS = "";
 				WARNING_CFLAGS = (
 					"-Wmost",
@@ -1376,7 +1366,6 @@
 				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PREPROCESSOR_DEFINITIONS = NDEBUG;
 				HEADER_SEARCH_PATHS = (
-					"$(DT_TOOLCHAIN_DIR)/usr/local/include",
 					"$(TOOLCHAIN_DIR)/usr/local/include",
 					"$(SRCROOT)/src/ld",
 				);
@@ -1388,7 +1377,7 @@
 				OTHER_LDFLAGS = "-stdlib=libc++";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = ObjectDump;
-				SDKROOT = macosx.internal;
+				SDKROOT = macosx;
 				WARNING_CFLAGS = (
 					"-Wmost",
 					"-Wno-four-char-constants",
@@ -1440,7 +1429,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx.internal;
+				SDKROOT = macosx;
 				WARNING_CFLAGS = "-Wformat-nonliteral";
 			};
 			name = Debug;
@@ -1486,7 +1475,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				SDKROOT = macosx.internal;
+				SDKROOT = macosx;
 				WARNING_CFLAGS = "-Wformat-nonliteral";
 			};
 			name = Release;
@@ -1552,7 +1541,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				SDKROOT = macosx.internal;
+				SDKROOT = macosx;
 				WARNING_CFLAGS = "-Wformat-nonliteral";
 			};
 			name = "Release-assert";
@@ -1614,10 +1603,7 @@
 				GCC_WARN_UNUSED_PARAMETER = NO;
 				GCC_WARN_UNUSED_VALUE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = (
-					"$(DT_TOOLCHAIN_DIR)/usr/local/include",
-					"$(TOOLCHAIN_DIR)/usr/local/include",
-				);
+				HEADER_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/local/include";
 				INSTALL_PATH = "$(DT_VARIANT)/$(TOOLCHAIN_INSTALL_DIR)/usr/bin";
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../lib/";
 				ONLY_ACTIVE_ARCH = YES;
@@ -1636,7 +1622,7 @@
 					"-Wl,-client_name,ld",
 				);
 				PRODUCT_NAME = "ld-classic";
-				SDKROOT = macosx.internal;
+				SDKROOT = macosx;
 				SECTORDER_FLAGS = "";
 				STRIP_INSTALLED_PRODUCT = YES;
 				STRIP_STYLE = debugging;
@@ -1673,7 +1659,7 @@
 					"-Wl,-exported_symbol,__mh_execute_header",
 				);
 				PRODUCT_NAME = unwinddump;
-				SDKROOT = macosx.internal;
+				SDKROOT = macosx;
 				STRIP_INSTALLED_PRODUCT = YES;
 				STRIP_STYLE = debugging;
 			};
@@ -1695,7 +1681,6 @@
 				GCC_PREPROCESSOR_DEFINITIONS = NDEBUG;
 				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = NO;
 				HEADER_SEARCH_PATHS = (
-					"$(DT_TOOLCHAIN_DIR)/usr/local/include",
 					"$(TOOLCHAIN_DIR)/usr/local/include",
 					"$(SRCROOT)/src/ld",
 				);
@@ -1707,7 +1692,7 @@
 				OTHER_LDFLAGS = "-stdlib=libc++";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = ObjectDump;
-				SDKROOT = macosx.internal;
+				SDKROOT = macosx;
 				WARNING_CFLAGS = (
 					"-Wmost",
 					"-Wno-four-char-constants",
@@ -1734,7 +1719,7 @@
 				);
 				OTHER_LDFLAGS = "-stdlib=libc++";
 				PRODUCT_NAME = machocheck;
-				SDKROOT = macosx.internal;
+				SDKROOT = macosx;
 			};
 			name = "Release-assert";
 		};
@@ -1853,7 +1838,7 @@
 				);
 				OTHER_LDFLAGS = "-stdlib=libc++";
 				PRODUCT_NAME = unwinddump;
-				SDKROOT = macosx.internal;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -1877,7 +1862,7 @@
 				);
 				OTHER_LDFLAGS = "-Wl,-exported_symbol,__mh_execute_header";
 				PRODUCT_NAME = unwinddump;
-				SDKROOT = macosx.internal;
+				SDKROOT = macosx;
 				STRIP_INSTALLED_PRODUCT = YES;
 				STRIP_STYLE = debugging;
 			};
@@ -1901,7 +1886,7 @@
 				);
 				OTHER_LDFLAGS = "-stdlib=libc++";
 				PRODUCT_NAME = machocheck;
-				SDKROOT = macosx.internal;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -1923,7 +1908,7 @@
 				);
 				OTHER_LDFLAGS = "-stdlib=libc++";
 				PRODUCT_NAME = machocheck;
-				SDKROOT = macosx.internal;
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
