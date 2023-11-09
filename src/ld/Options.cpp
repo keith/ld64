@@ -66,7 +66,7 @@ namespace lto {
 // magic to place command line in crash reports
 const int crashreporterBufferSize = 2000;
 static char crashreporterBuffer[crashreporterBufferSize];
-#if __MAC_OS_X_VERSION_MIN_REQUIRED >= 1070
+#if 0
 	#include <CrashReporterClient.h>
 	// hack until ld does not need to build on 10.6 anymore
     struct crashreporter_annotations_t gCRAnnotations
@@ -6941,7 +6941,7 @@ void Options::expandResponseFiles(int& argc, const char**& argv)
 void Options::setupCrashReportInfo(int argc, const char* argv[])
 {
 	// build command line buffer in case ld crashes
-	CRSetCrashLogMessage(crashreporterBuffer);
+//	CRSetCrashLogMessage(crashreporterBuffer);
 	const char* srcRoot = getenv("SRCROOT");
 	if ( srcRoot != NULL ) {
 		strlcpy(crashreporterBuffer, "SRCROOT=", crashreporterBufferSize);
