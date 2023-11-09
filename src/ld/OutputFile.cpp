@@ -57,7 +57,11 @@ extern "C" {
 
 #include <CommonCrypto/CommonDigest.h>
 #include <AvailabilityMacros.h>
-#include <System/machine/cpu_capabilities.h>
+#if __arm64__
+#include "arm_cpu_capabilities.h"
+#elif __x86_64__
+#include "x86_cpu_capabilities.h"
+#endif
 
 #include "ExportsTrie.h"
 
