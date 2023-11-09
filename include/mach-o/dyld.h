@@ -41,6 +41,9 @@ extern "C" {
  #define DYLD_DRIVERKIT_UNAVAILABLE
 #endif
 
+#define DYLD_EXCLAVEKIT_UNAVAILABLE
+#define __API_AVAILABLE_PLATFORM_bridgeos(x) bridgeos,introduced=x
+#define __API_UNAVAILABLE_PLATFORM_bridgeos bridgeos,unavailable
 
 /*
  * The following functions allow you to iterate through all loaded images.  
@@ -159,8 +162,6 @@ typedef enum {
 } NSObjectFileImageReturnCode;
 
 typedef struct __NSObjectFileImage* NSObjectFileImage;
-
-#define DYLD_EXCLAVEKIT_UNAVAILABLE
 
 /* NSObjectFileImage can only be used with MH_BUNDLE files */
 extern NSObjectFileImageReturnCode NSCreateObjectFileImageFromFile(const char* pathName, NSObjectFileImage *objectFileImage)               __API_UNAVAILABLE(ios, tvos, watchos) __API_UNAVAILABLE(bridgeos) DYLD_DRIVERKIT_UNAVAILABLE DYLD_EXCLAVEKIT_UNAVAILABLE __OSX_DEPRECATED(10.1, 10.5, "dlopen()");
