@@ -326,7 +326,7 @@ extern uint32_t dyld_get_program_sdk_watch_os_version(void) __API_AVAILABLE(watc
 extern uint32_t dyld_get_program_min_watch_os_version(void) __API_AVAILABLE(watchos(3.0));
 #endif
 
-#if TARGET_OS_BRIDGE
+#if 0
 // bridgeOS only.
 // This finds the bridgeOS SDK version that the main executable was built against.
 // Exists in bridgeOSOS 2.0 and later
