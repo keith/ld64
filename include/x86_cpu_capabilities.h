@@ -25,8 +25,6 @@
  *
  * @APPLE_OSREFERENCE_LICENSE_HEADER_END@
  */
-#ifdef  PRIVATE
-
 #ifndef _I386_CPU_CAPABILITIES_H
 #define _I386_CPU_CAPABILITIES_H
 
@@ -328,4 +326,3 @@ CREATE_COMM_PAGE_SYMBOL(___end_comm_page, _COMM_PAGE_END)
 
 #endif /* defined (__i386__) || defined (__x86_64__) */
 #endif /* _I386_CPU_CAPABILITIES_H */
-#endif /* PRIVATE */

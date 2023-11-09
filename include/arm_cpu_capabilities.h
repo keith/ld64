@@ -25,8 +25,6 @@
  *
  * @APPLE_OSREFERENCE_LICENSE_HEADER_END@
  */
-#ifdef  PRIVATE
-
 #ifndef _ARM_CPU_CAPABILITIES_H
 #define _ARM_CPU_CAPABILITIES_H
 
@@ -385,4 +383,3 @@ _Static_assert((_COMM_PAGE64_BASE_ADDRESS >= _COMM_PAGE64_NESTING_START) &&
 
 #endif /* defined (__arm__) || defined (__arm64__) */
 #endif /* _ARM_CPU_CAPABILITIES_H */
-#endif /* PRIVATE */
