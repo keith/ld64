@@ -1061,11 +1061,6 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VALUE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = (
-					"$(SRCROOT)/src/ld",
-					"$(DEVELOPER_DIR)/usr/local/include",
-					"$(TOOLCHAIN_DIR)/usr/local/include",
-				);
 				INSTALL_PATH = "$(DT_VARIANT)/$(TOOLCHAIN_INSTALL_DIR)/usr/local/bin";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = objcimageinfo;
@@ -1090,11 +1085,6 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PREPROCESSOR_DEFINITIONS = NDEBUG;
-				HEADER_SEARCH_PATHS = (
-					"$(SRCROOT)/src/ld",
-					"$(DEVELOPER_DIR)/usr/local/include",
-					"$(TOOLCHAIN_DIR)/usr/local/include",
-				);
 				INSTALL_PATH = "$(DT_VARIANT)/$(TOOLCHAIN_INSTALL_DIR)/usr/local/bin";
 				PRODUCT_NAME = objcimageinfo;
 				SDKROOT = macosx;
@@ -1118,11 +1108,6 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PREPROCESSOR_DEFINITIONS = NDEBUG;
-				HEADER_SEARCH_PATHS = (
-					"$(SRCROOT)/src/ld",
-					"$(DEVELOPER_DIR)/usr/local/include",
-					"$(TOOLCHAIN_DIR)/usr/local/include",
-				);
 				INSTALL_PATH = "$(DT_VARIANT)/$(TOOLCHAIN_INSTALL_DIR)/usr/local/bin";
 				PRODUCT_NAME = objcimageinfo;
 				SDKROOT = macosx;
