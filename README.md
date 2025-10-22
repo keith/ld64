@@ -14,6 +14,7 @@ If you would like to build ld64 yourself, which can be useful for
 debugging linker issues, you can use these branches depending on what
 ld64 version you want to test:
 
+- [buildable-26.0](https://github.com/keith/ld64/tree/buildable-26.0)
 - [buildable-16.0](https://github.com/keith/ld64/tree/buildable-16.0)
 - [buildable-15.3](https://github.com/keith/ld64/tree/buildable-15.3)
 - [buildable-15.0](https://github.com/keith/ld64/tree/buildable-15.0)
