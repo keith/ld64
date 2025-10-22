@@ -36,7 +36,7 @@
 #include <Availability.h>
 #include <tapi/tapi.h>
 #include <mach-o/dyld_priv.h>
-#include <CoreAnalytics/CoreAnalytics.h>
+//#include <CoreAnalytics/CoreAnalytics.h>
 
 #include <algorithm>
 #include <vector>

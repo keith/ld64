@@ -1019,6 +1019,7 @@
 					/var/db/xcode_select_link/Toolchains/XcodeDefault.xctoolchain/usr/lib/,
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib,
 				);
+				LIBRARY_SEARCH_PATHS = /var/db/xcode_select_link/Toolchains/XcodeDefault.xctoolchain/usr/lib/;
 				LINKER_DISPLAYS_MANGLED_NAMES = NO;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CPLUSPLUSFLAGS = (
@@ -1049,6 +1050,7 @@
 					"-Wimplicit-fallthrough",
 					"-Wno-unused-but-set-variable",
 					"-Wno-vla-extension",
+					"-Wno-gnu-folding-constant",
 				);
 			};
 			name = Debug;
@@ -1102,6 +1104,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INSTALL_PATH = "$(DT_VARIANT)/$(TOOLCHAIN_INSTALL_DIR)/usr/bin";
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../lib/";
+				LIBRARY_SEARCH_PATHS = /var/db/xcode_select_link/Toolchains/XcodeDefault.xctoolchain/usr/lib/;
 				OTHER_CPLUSPLUSFLAGS = (
 					"-stdlib=libc++",
 					"$(OTHER_CPLUSPLUSFLAGS)",
@@ -1132,6 +1135,7 @@
 					"-Wimplicit-fallthrough",
 					"-Wno-unused-but-set-variable",
 					"-Wno-vla-extension",
+					"-Wno-gnu-folding-constant",
 				);
 			};
 			name = Release;
@@ -1450,6 +1454,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INSTALL_PATH = "$(DT_VARIANT)/$(TOOLCHAIN_INSTALL_DIR)/usr/bin";
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../lib/";
+				LIBRARY_SEARCH_PATHS = /var/db/xcode_select_link/Toolchains/XcodeDefault.xctoolchain/usr/lib/;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CPLUSPLUSFLAGS = (
 					"-stdlib=libc++",
@@ -1481,6 +1486,7 @@
 					"-Wimplicit-fallthrough",
 					"-Wno-unused-but-set-variable",
 					"-Wno-vla-extension",
+					"-Wno-gnu-folding-constant",
 				);
 			};
 			name = "Release-assert";
