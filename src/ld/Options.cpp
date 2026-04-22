@@ -5363,6 +5363,7 @@ void Options::reconfigureDefaults()
 			ld::Platform::iOS,
 			ld::Platform::tvOS,
 			ld::Platform::watchOS,
+			ld::Platform::xrOS,
 			ld::Platform::driverKit
 	} );
 	bool noEncryptablePlatforms = std::none_of(encryptablePlatforms.begin(), encryptablePlatforms.end(), [this](ld::Platform p) {
@@ -6237,6 +6238,8 @@ static bool isModernPlatform(ld::Platform platform)
 		case ld::Platform::freestanding:
 		case ld::Platform::driverKit:
 		case ld::Platform::sepOS:
+		case ld::Platform::xrOS:
+		case ld::Platform::xrOS_simulator:
 			return true;
 
 	}
