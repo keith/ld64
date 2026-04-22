@@ -291,8 +291,9 @@ File<A>::File(const uint8_t fileContent[], uint64_t fileLength, const char* pth,
 	_loadMode(opts.loadMode), _objc2ABI(opts.objcABI2), _verboseLoad(opts.verboseLoad), 
 	_logAllFiles(opts.logAllFiles), _alreadyLoadedAll(false), _objOpts(opts.objOpts)
 {
-	if ( strncmp((const char*)fileContent, "!<arch>\n", 8) != 0 )
-		throw "not an archive";
+		if ( strncmp((const char*)fileContent, "!<arch>\n", 8) != 0 ) {
+			throw "not an archive";
+		}
 
 		const Entry* const firstMember = (Entry*)&_archiveFileContent[8];
 		char memberName[256];
